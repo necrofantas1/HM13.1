@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace HM13._1.Classes
 {
-    internal class toDoTask
+    internal class ToDoTask
     {
          string Title { get; set; }
          public bool isCompleted { get; set; }
 
-        public toDoTask(string title)
+        public ToDoTask(string title)
         {
             Title = title;
             isCompleted = false;

@@ -9,7 +9,7 @@ namespace HM13._1.Classes
 {
     class TasksManager
     {
-        private toDoTask[] tasks = new toDoTask[5];
+        private ToDoTask[] tasks = new ToDoTask[5];
         private int tasksCount;
 
         public void PrintMenu()
@@ -60,14 +60,14 @@ namespace HM13._1.Classes
                 ArrayResize();
             }
 
-            tasks[tasksCount] = new toDoTask(taskName);
+            tasks[tasksCount] = new ToDoTask(taskName);
             tasksCount++;
         }
 
         public void ArrayResize()
         {
             int newSize = tasks.Length + 1;
-            toDoTask[] newArray = new toDoTask[newSize];
+            ToDoTask[] newArray = new ToDoTask[newSize];
 
             for (int i = 0; i < tasksCount; i++)
             {
