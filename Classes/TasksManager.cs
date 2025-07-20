@@ -99,7 +99,7 @@ namespace HM13._1.Classes
             Console.Write("Введіть номер завдання, щоб позначити його як виконане: ");
             if (int.TryParse(Console.ReadLine(), out int index) && index >= 1 && index <= tasksCount)
             {
-                tasks[index - 1].IsCompleted = true;
+                tasks[index - 1].isCompleted = true;
             }
             else
             {

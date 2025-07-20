@@ -8,18 +8,18 @@ namespace HM13._1.Classes
 {
     internal class toDoTask
     {
-        public string Title { get; set; }
-        public bool IsCompleted { get; set; }
+         string Title { get; set; }
+         public bool isCompleted { get; set; }
 
         public toDoTask(string title)
         {
             Title = title;
-            IsCompleted = false;
+            isCompleted = false;
         }
 
         public override string ToString()
         {
-            return $"{Title} - {(IsCompleted ? "Виконано" : "Не виконано")}";
+            return $"{Title} - {(isCompleted ? "Виконано" : "Не виконано")}";
         }
     }
 }
