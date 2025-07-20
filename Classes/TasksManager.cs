@@ -22,7 +22,7 @@ namespace HM13._1.Classes
             Console.WriteLine("5. Вийти");
         }
 
-        public void UserChoice()
+        public void UserChoice(ref bool running)
         {
             string userChoice = Console.ReadLine();
 
@@ -39,9 +39,9 @@ namespace HM13._1.Classes
                     break;
                 case "4":
                     DeleteTask();
-                    break;
-                case "5":
-                    Environment.Exit(0);
+                    break;        
+                    case "5":
+                    running = false;
                     break;
                 default:
                     Console.WriteLine("Будь ласка, оберіть число від 1 до 5");
@@ -133,10 +133,13 @@ namespace HM13._1.Classes
             {
                 Console.Clear();
                 PrintMenu();
-                UserChoice();
-                Console.WriteLine("Натисніть будь-яку клавішу, щоб продовжити...");
-                Console.ReadKey();
-            }
+                UserChoice(ref running);
+                if (running)
+                {
+                    Console.WriteLine("Натисніть будь-яку клавішу, щоб продовжити...");
+                    Console.ReadKey();
+                }
+            }         
         }
     }
 }
